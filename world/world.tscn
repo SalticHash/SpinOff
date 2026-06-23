@@ -26,17 +26,30 @@ shadow_enabled = true
 [node name="Player" parent="." unique_id=791315332 instance=ExtResource("1_6xmxd")]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1413264802]
+use_collision = true
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1488138381]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.31745493, -1.3449482, -0.5171361)
-size = Vector3(17.36, 0.319, 15.778)
+size = Vector3(42.513916, 0.319, 31.279541)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1885836365]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9601774, -0.780784, -0.5171361)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.178351, -0.780784, -7.2735524)
+size = Vector3(4, 4, 4)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D" unique_id=571524843]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.895421, -0.780784, -0.0992465)
 size = Vector3(4, 4, 4)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1705526150]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.723054, -2.5726566, 3.474988)
+size = Vector3(4, 4, 4)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1988549789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.326175, -2.5726576, 2.6331387)
+size = Vector3(4, 4, 4)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1004546973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8781757, -2.5726576, 8.839831)
 size = Vector3(4, 4, 4)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D" unique_id=2037096959]
