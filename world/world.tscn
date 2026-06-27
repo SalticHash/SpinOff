@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://vqmk888lbu0c" path="res://player/player.tscn" id="1_6xmxd"]
 [ext_resource type="Script" uid="uid://b7yaq64yb3mdm" path="res://world/world.gd" id="1_4717r"]
 [ext_resource type="PackedScene" uid="uid://cagn44r325fe7" path="res://box/box.tscn" id="2_tcf2h"]
+[ext_resource type="PackedScene" uid="uid://cc63fs76sfts0" path="res://player/wheel_stand.tscn" id="3_mmdvd"]
 [ext_resource type="PackedScene" uid="uid://creq0wfpbhlv7" path="res://watermelon/watermelon.tscn" id="4_h5o24"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6xmxd"]
@@ -213,3 +214,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.56638, 1.3403912, 4.06973
 
 [node name="Watermelon4" parent="." unique_id=1184139596 instance=ExtResource("4_h5o24")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.710915, 1.3403912, 8.464652)
+
+[node name="Stand" parent="." unique_id=1804393402 instance=ExtResource("3_mmdvd")]
+transform = Transform3D(0.715, 0, 0, 0, 0.715, 0, 0, 0, 0.715, 0.382, 0.918, 2.986)

@@ -36,7 +36,7 @@ func animate(delta: float) -> void:
 	rot.tween_property($Sprite, "rotation_degrees", Vector3(0, 180 if (accel_dir == -1.0) else 0, 0), 0.2)
 	$Sprite.walk_speed = clamp(remap(abs(speed), 0, MAX_SPEED, 0.2, 0.025), 0.025, 0.2)
 
-var was_on_floor: bool = true
+var was_on_floor: bool = false
 var last_floor_position: Vector3 = Vector3.ZERO
 func _physics_process(delta: float) -> void:
 	if is_on_wall():

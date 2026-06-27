@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cc63fs76sfts0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5o24"]
+albedo_color = Color(0.9999996, 0.7766452, 0.47839224, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmdvd"]
+albedo_color = Color(0.9999996, 0.7766452, 0.47839224, 1)
+
+[node name="Stand" type="Node3D" unique_id=1804393402]
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1390877066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6311408, 3.5063782, 0)
+size = Vector3(0.5233154, 8.012756, 1)
+material = SubResource("StandardMaterial3D_h5o24")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=1494666171]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6311408, -0.9114809, 0)
+size = Vector3(0.928, 0.763, 5.63)
+material = SubResource("StandardMaterial3D_h5o24")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=370341754]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 1.4044366, 3.5632668, 0)
+radius = 0.17
+height = 0.695
+material = SubResource("StandardMaterial3D_mmdvd")
