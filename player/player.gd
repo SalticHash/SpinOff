@@ -42,12 +42,21 @@ var was_on_floor: bool = false
 var last_floor_position: Vector3 = Vector3.ZERO
 
 func _ready() -> void:
-	Global.explode.connect(func(): hide())
+	Global.explode.connect(func(): 
+		$MoveMusic.stop()
+		hide()
+		)
+	Global.trapped.connect(func():
+		$MoveMusic.pitch_scale = 1.0
+		$MoveMusic.volume_db = 0.0
+	)
 	Global.dialog_ended.connect(func(): max_locked = false)
 var wall_stun: float = 0.0
 var WALL_STUN: float = 0.1
 func _physics_process(delta: float) -> void:
 	if follow and follow.is_inside_tree():
+		$MoveMusic.pitch_scale += delta * 1.0
+		$MoveMusic.volume_db += delta * 1.5
 		$Collision.disabled = true
 		Global.end = true
 		global_position = follow.global_position + Vector3(0, -4, 2)
@@ -172,7 +181,7 @@ func _physics_process(delta: float) -> void:
 @onready var _camera := %Camera as Camera3D
 @onready var _camera_pivot := %CameraPivot as Node3D
 
-@export_range(0.0, 1.0) var mouse_sensitivity = 0.01
+@export_range(0.0, 1.0) var mouse_sensitivity = 0.005
 @export var tilt_limit = deg_to_rad(75)
 
 
