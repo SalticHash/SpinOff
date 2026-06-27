@@ -18,11 +18,14 @@ albedo_color = Color(1, 0.29803923, 0.21568628, 1)
 albedo_color = Color(1, 0.96099997, 0.22000003, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jh3y0"]
-size = Vector2(195, 23)
+size = Vector2(172, 23)
 orientation = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcf2h"]
 albedo_color = Color(0.68365556, 1, 0.62206566, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ov2xu"]
+data = PackedVector3Array(86, -11.5, 0, -86, -11.5, 0, 86, 11.5, 0, -86, -11.5, 0, -86, 11.5, 0, 86, 11.5, 0)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_sc4t8"]
 size = Vector2(232, 23)
@@ -31,12 +34,23 @@ orientation = 0
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sc4t8"]
 data = PackedVector3Array(0, -11.5, -116.5, 0, -11.5, 116.5, 0, 11.5, -116.5, 0, -11.5, 116.5, 0, 11.5, 116.5, 0, 11.5, -116.5)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_mad0u"]
+size = Vector2(160, 23)
+orientation = 0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mad0u"]
+data = PackedVector3Array(0, -11.5, -80, 0, -11.5, 80, 0, 11.5, -80, 0, -11.5, 80, 0, 11.5, 80, 0, 11.5, -80)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_fn3g3"]
 size = Vector2(24, 14)
 orientation = 2
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ai45w"]
 data = PackedVector3Array(13, -7, 0, -13, -7, 0, 13, 7, 0, -13, -7, 0, -13, 7, 0, 13, 7, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ocfjn"]
+size = Vector2(24, 14)
+orientation = 2
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ai45w"]
 flip_faces = true
@@ -46,13 +60,24 @@ orientation = 0
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4papg"]
 data = PackedVector3Array(0, -11.5, 128, 0, -11.5, -128, 0, 11.5, -128, 0, 11.5, 128, 0, -11.5, 128, 0, 11.5, -128)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_dqqhb"]
+flip_faces = true
+size = Vector2(136, 23)
+orientation = 0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_b2suy"]
+data = PackedVector3Array(0, -11.5, 68, 0, -11.5, -68, 0, 11.5, -68, 0, 11.5, 68, 0, -11.5, 68, 0, 11.5, -68)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_h8lre"]
+data = PackedVector3Array(0, -11.5, 68, 0, -11.5, -68, 0, 11.5, -68, 0, 11.5, 68, 0, -11.5, 68, 0, 11.5, -68)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_4papg"]
 flip_faces = true
-size = Vector2(180, 22)
+size = Vector2(220, 22)
 orientation = 2
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fyhu2"]
-data = PackedVector3Array(-90.5, -11, 0, 90.5, -11, 0, 90.5, 11, 0, -90.5, 11, 0, -90.5, -11, 0, 90.5, 11, 0)
+data = PackedVector3Array(-110, -11, 0, 110, -11, 0, 110, 11, 0, -110, 11, 0, -110, -11, 0, 110, 11, 0)
 
 [node name="Game" type="Node" unique_id=364311668]
 script = ExtResource("1_4717r")
@@ -172,10 +197,14 @@ size = Vector3(172, 1, 24)
 material = SubResource("StandardMaterial3D_fn3g3")
 
 [node name="Wall_2_2" type="MeshInstance3D" parent="World/Map" unique_id=205250097]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -128.5, 2.5, 224)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 2.5, 224)
 mesh = SubResource("PlaneMesh_jh3y0")
 surface_material_override/0 = SubResource("StandardMaterial3D_tcf2h")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="World/Map/Wall_2_2" unique_id=1059923772]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Map/Wall_2_2/StaticBody3D" unique_id=1102755796]
+shape = SubResource("ConcavePolygonShape3D_ov2xu")
 
 [node name="Wall_2_1" type="MeshInstance3D" parent="World/Map" unique_id=433874396]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 2.5, 108)
@@ -187,6 +216,16 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tcf2h")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Map/Wall_2_1/StaticBody3D" unique_id=1446486505]
 shape = SubResource("ConcavePolygonShape3D_sc4t8")
 
+[node name="Wall_2_3" type="MeshInstance3D" parent="World/Map" unique_id=76625095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -208, 2.5, 168)
+mesh = SubResource("PlaneMesh_mad0u")
+surface_material_override/0 = SubResource("StandardMaterial3D_tcf2h")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="World/Map/Wall_2_3" unique_id=1726337911]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Map/Wall_2_3/StaticBody3D" unique_id=1154325740]
+shape = SubResource("ConcavePolygonShape3D_mad0u")
+
 [node name="Wall_3" type="MeshInstance3D" parent="World/Map" unique_id=1220464040]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, -8)
 mesh = SubResource("PlaneMesh_fn3g3")
@@ -195,6 +234,16 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tcf2h")
 [node name="StaticBody3D" type="StaticBody3D" parent="World/Map/Wall_3" unique_id=1318806121]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Map/Wall_3/StaticBody3D" unique_id=530910060]
+shape = SubResource("ConcavePolygonShape3D_ai45w")
+
+[node name="Wall_5" type="MeshInstance3D" parent="World/Map" unique_id=573951344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, 7, 88)
+mesh = SubResource("PlaneMesh_ocfjn")
+surface_material_override/0 = SubResource("StandardMaterial3D_tcf2h")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="World/Map/Wall_5" unique_id=1938239669]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Map/Wall_5/StaticBody3D" unique_id=1384865271]
 shape = SubResource("ConcavePolygonShape3D_ai45w")
 
 [node name="Wall_1" type="MeshInstance3D" parent="World/Map" unique_id=1103080534]
@@ -207,14 +256,29 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tcf2h")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="World/Map/Wall_1/StaticBody3D" unique_id=996301616]
 shape = SubResource("ConcavePolygonShape3D_4papg")
 
+[node name="Wall_2" type="MeshInstance3D" parent="World/Map" unique_id=878043324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -184, 2.5, 156)
+mesh = SubResource("PlaneMesh_dqqhb")
+surface_material_override/0 = SubResource("StandardMaterial3D_tcf2h")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="World/Map/Wall_2" unique_id=1663496334]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Map/Wall_2/StaticBody3D" unique_id=667221701]
+shape = SubResource("ConcavePolygonShape3D_b2suy")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="World/Map/Wall_2" unique_id=1895233602]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Map/Wall_2/StaticBody3D2" unique_id=229639357]
+shape = SubResource("ConcavePolygonShape3D_h8lre")
+
 [node name="Wall_4" type="MeshInstance3D" parent="World/Map" unique_id=1587251006]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78, 3, 248)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, 3, 248)
 mesh = SubResource("PlaneMesh_4papg")
 surface_material_override/0 = SubResource("StandardMaterial3D_tcf2h")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="World/Map/Wall_4" unique_id=727245159]
+[node name="StaticBody3D" type="StaticBody3D" parent="World/Map/Wall_4" unique_id=1978547794]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Map/Wall_4/StaticBody3D" unique_id=927813473]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="World/Map/Wall_4/StaticBody3D" unique_id=1065299939]
 shape = SubResource("ConcavePolygonShape3D_fyhu2")
 
 [node name="Camera3D" type="Camera3D" parent="World" unique_id=615469034]
@@ -408,6 +472,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.56638, 1.3403912, 4.06973
 
 [node name="Watermelon4" parent="World" unique_id=1184139596 instance=ExtResource("4_h5o24")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, 1.5, 144)
+
+[node name="Watermelon8" parent="World" unique_id=274657392 instance=ExtResource("4_h5o24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 104)
+
+[node name="Watermelon9" parent="World" unique_id=779854147 instance=ExtResource("4_h5o24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 146)
+
+[node name="Watermelon11" parent="World" unique_id=244028750 instance=ExtResource("4_h5o24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -183, 1.5, 236)
+
+[node name="Watermelon12" parent="World" unique_id=1870587210 instance=ExtResource("4_h5o24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -190, 1.5, 235)
+
+[node name="Watermelon13" parent="World" unique_id=2039887821 instance=ExtResource("4_h5o24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, 1.5, 229)
+
+[node name="Watermelon14" parent="World" unique_id=413336831 instance=ExtResource("4_h5o24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -198, 1.5, 220)
+
+[node name="Watermelon15" parent="World" unique_id=358538280 instance=ExtResource("4_h5o24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -199, 1.5, 208)
+
+[node name="Watermelon10" parent="World" unique_id=492769200 instance=ExtResource("4_h5o24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, 170)
 
 [node name="Watermelon7" parent="World" unique_id=1064959878 instance=ExtResource("4_h5o24")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -196, 11.5, 99)
