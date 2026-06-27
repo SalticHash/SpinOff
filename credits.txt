@@ -5,9 +5,15 @@ Rick The Hamster Model by [CJ310](https://sketchfab.com/cj310)
 
 Roll sound from Pixabay, sorry I got it a long time ago so no idea who made it.
 
-Wheel step sound by [freesound_community](https://pixabay.com/users/freesound_community-46691455/)
+Sounds from [freesound_community](https://pixabay.com/users/freesound_community-46691455/)
+Wheel Step sound:
 - https://pixabay.com/sound-effects/film-special-effects-screen-tap-38717/
-- Edited for my needs
+Firework Whistle:
+- https://pixabay.com/sound-effects/film-special-effects-firework-2-100072/
+Firework Explosion:
+- https://pixabay.com/sound-effects/film-special-effects-fuse-and-small-explosion-95138/
+Bowling pin sound:
+- https://pixabay.com/sound-effects/film-special-effects-single-bowling-pin-knock-97302/
 
 Game and logo font - Albert Sans
 

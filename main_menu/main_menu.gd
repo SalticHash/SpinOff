@@ -2,6 +2,7 @@ extends Control
 
 var opened: bool = false
 func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	$AnimationPlayer.play("hover")
 	
 

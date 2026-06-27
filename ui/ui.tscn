@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://omoph7s6w4ka"]
+
+[ext_resource type="Script" uid="uid://1ebf62vhay3v" path="res://ui/ui.gd" id="1_wl5ax"]
+[ext_resource type="Texture2D" uid="uid://7rcrybksnxuw" path="res://box/box_icon.png" id="2_vkava"]
+[ext_resource type="Texture2D" uid="uid://batls6yf5xf3t" path="res://watermelon/watermelon.png" id="3_tf0e0"]
+[ext_resource type="FontFile" uid="uid://tthvwfsswj2t" path="res://main_menu/font/AlbertSans-BlackItalic.ttf" id="3_vkava"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_obcwv"]
+font = ExtResource("3_vkava")
+
+[node name="UI" type="Control" unique_id=482880489]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wl5ax")
+
+[node name="Counters" type="VBoxContainer" parent="." unique_id=1119377744]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -97.0
+offset_right = 204.0
+offset_bottom = -16.0
+grow_vertical = 0
+
+[node name="Boxes" type="HBoxContainer" parent="Counters" unique_id=500513687]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Icon" type="TextureRect" parent="Counters/Boxes" unique_id=1674670443]
+layout_mode = 2
+texture = ExtResource("2_vkava")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Counters/Boxes" unique_id=2142974091]
+layout_mode = 2
+text = "Boxes: 0"
+label_settings = SubResource("LabelSettings_obcwv")
+
+[node name="Melons" type="HBoxContainer" parent="Counters" unique_id=1355648740]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Icon" type="TextureRect" parent="Counters/Melons" unique_id=2093679940]
+layout_mode = 2
+texture = ExtResource("3_tf0e0")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="Counters/Melons" unique_id=217214999]
+layout_mode = 2
+text = "Melons: 0"
+label_settings = SubResource("LabelSettings_obcwv")
