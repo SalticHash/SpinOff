@@ -17,14 +17,11 @@ albedo_color = Color(1, 0.29803923, 0.21568628, 1)
 albedo_color = Color(1, 0.96099997, 0.22000003, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jh3y0"]
-size = Vector2(233, 23)
+size = Vector2(195, 23)
 orientation = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tcf2h"]
 albedo_color = Color(0.68365556, 1, 0.62206566, 1)
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fn3g3"]
-data = PackedVector3Array(116.5, -11.5, 0, -116.5, -11.5, 0, 116.5, 11.5, 0, -116.5, -11.5, 0, -116.5, 11.5, 0, 116.5, 11.5, 0)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_sc4t8"]
 size = Vector2(232, 23)
@@ -87,8 +84,38 @@ size = Vector3(24, 8, 120)
 material = SubResource("StandardMaterial3D_h5o24")
 
 [node name="Floor_7" type="CSGBox3D" parent="Map" unique_id=158852279]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.5, -4, 236)
-size = Vector3(131, 8, 24)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70, -4, 236)
+size = Vector3(164, 8, 24)
+material = SubResource("StandardMaterial3D_h5o24")
+
+[node name="Floor_10" type="CSGBox3D" parent="Map" unique_id=144554041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -192, -4, 236)
+size = Vector3(32, 8, 24)
+material = SubResource("StandardMaterial3D_h5o24")
+
+[node name="Floor_11" type="CSGBox3D" parent="Map" unique_id=1731663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, -4, 212)
+size = Vector3(24, 8, 24)
+material = SubResource("StandardMaterial3D_h5o24")
+
+[node name="Floor_12" type="CSGBox3D" parent="Map" unique_id=1792852404]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, -4, 108)
+size = Vector3(24, 8, 40)
+material = SubResource("StandardMaterial3D_h5o24")
+
+[node name="Floor_13" type="CSGBox3D" parent="Map" unique_id=1026919015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -204, -4, 180)
+size = Vector3(8, 8, 8)
+material = SubResource("StandardMaterial3D_h5o24")
+
+[node name="Floor_14" type="CSGBox3D" parent="Map" unique_id=1630249585]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -188, -4, 164)
+size = Vector3(8, 8, 8)
+material = SubResource("StandardMaterial3D_h5o24")
+
+[node name="Floor_15" type="CSGBox3D" parent="Map" unique_id=1596468621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, -4, 144)
+size = Vector3(8, 8, 8)
 material = SubResource("StandardMaterial3D_h5o24")
 
 [node name="Floor_8" type="CSGBox3D" parent="Map" unique_id=1241112540]
@@ -96,9 +123,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, 203)
 size = Vector3(24, 4, 6)
 material = SubResource("StandardMaterial3D_h5o24")
 
+[node name="Floor_16" type="CSGBox3D" parent="Map" unique_id=1010904893]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -188, -6, 197)
+size = Vector3(8, 4, 6)
+material = SubResource("StandardMaterial3D_h5o24")
+
 [node name="Floor_5" type="CSGBox3D" parent="Map" unique_id=1696736611]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -18, 37.5)
-size = Vector3(24, 6, 25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -156, -6, 236)
+size = Vector3(8, 4, 24)
 material = SubResource("StandardMaterial3D_h5o24")
 
 [node name="Obstacle_1" type="CSGBox3D" parent="Map" unique_id=1489644499]
@@ -122,24 +154,25 @@ size = Vector3(24, 2, 3)
 material = SubResource("StandardMaterial3D_mmdvd")
 
 [node name="Floor_3" type="CSGBox3D" parent="Map" unique_id=1419972972]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.5, 132)
-size = Vector3(24, 1, 234)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.5, 131.5)
+size = Vector3(24, 1, 233)
+material = SubResource("StandardMaterial3D_fn3g3")
+
+[node name="Floor_17" type="CSGBox3D" parent="Map" unique_id=1181133314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, -8.5, 168)
+size = Vector3(24, 1, 160)
 material = SubResource("StandardMaterial3D_fn3g3")
 
 [node name="Floor_9" type="CSGBox3D" parent="Map" unique_id=1802335613]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -8.5, 236.5)
-size = Vector3(24, 1, 25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, -8.5, 236)
+size = Vector3(172, 1, 24)
 material = SubResource("StandardMaterial3D_fn3g3")
 
 [node name="Wall_2_2" type="MeshInstance3D" parent="Map" unique_id=205250097]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -128.5, 2.5, 224)
+visible = false
 mesh = SubResource("PlaneMesh_jh3y0")
 surface_material_override/0 = SubResource("StandardMaterial3D_tcf2h")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Map/Wall_2_2" unique_id=223616256]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall_2_2/StaticBody3D" unique_id=349086356]
-shape = SubResource("ConcavePolygonShape3D_fn3g3")
 
 [node name="Wall_2_1" type="MeshInstance3D" parent="Map" unique_id=433874396]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 2.5, 108)
@@ -180,18 +213,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tcf2h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Wall_4/StaticBody3D" unique_id=927813473]
 shape = SubResource("ConcavePolygonShape3D_fyhu2")
-
-[node name="Ball_1" type="CSGSphere3D" parent="Map" unique_id=2021525561]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.64273, 0, -2.1466923)
-radius = 2.81
-
-[node name="Ball_2" type="CSGSphere3D" parent="Map" unique_id=1940474623]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.074715, -1.9073486e-06, 5.4490967)
-radius = 2.81
-
-[node name="Ball_3" type="CSGSphere3D" parent="Map" unique_id=221349001]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.8827, 0, -5.6417847)
-radius = 2.81
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=615469034]
 transform = Transform3D(-0.3255681, 0.28432295, -0.9017571, 0, 0.953717, 0.30070582, 0.9455186, 0.09790022, -0.31049982, -12.815, 6.17, -3.635)
@@ -316,6 +337,54 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.5, 4.5, 240.5)
 [node name="Box37" parent="Objects" unique_id=1399941422 instance=ExtResource("2_tcf2h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.5, 1.5, 231.5)
 
+[node name="Box45" parent="Objects" unique_id=436162489 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -124.5, 1.5, 235.5)
+
+[node name="Box51" parent="Objects" unique_id=1434419805 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -127.5, 4.5, 235.5)
+
+[node name="Box56" parent="Objects" unique_id=1025643847 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -130.5, 4.5, 233.5)
+
+[node name="Box57" parent="Objects" unique_id=1672648011 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -130.5, 4.5, 236.5)
+
+[node name="Box58" parent="Objects" unique_id=1334588405 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.5, 4.5, 232.5)
+
+[node name="Box59" parent="Objects" unique_id=1557195251 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.5, 4.5, 235.5)
+
+[node name="Box60" parent="Objects" unique_id=141610942 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.5, 4.5, 238.5)
+
+[node name="Box48" parent="Objects" unique_id=546257859 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -130.5, 1.5, 235.5)
+
+[node name="Box49" parent="Objects" unique_id=2101219289 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -130.5, 1.5, 238.5)
+
+[node name="Box46" parent="Objects" unique_id=2143804672 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -127.5, 1.5, 236.5)
+
+[node name="Box47" parent="Objects" unique_id=1949210436 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -127.5, 1.5, 233.5)
+
+[node name="Box50" parent="Objects" unique_id=361939703 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -130.5, 1.5, 232.5)
+
+[node name="Box52" parent="Objects" unique_id=1816019899 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.5, 1.5, 236.5)
+
+[node name="Box53" parent="Objects" unique_id=255013455 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.5, 1.5, 239.5)
+
+[node name="Box54" parent="Objects" unique_id=2012541286 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.5, 1.5, 233.5)
+
+[node name="Box55" parent="Objects" unique_id=843843848 instance=ExtResource("2_tcf2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -133.5, 1.5, 230.5)
+
 [node name="Box38" parent="Objects" unique_id=1408527787 instance=ExtResource("2_tcf2h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.5, 1.5, 228.5)
 
@@ -335,7 +404,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -54.752583, 1.3403902, 0.1367
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.56638, 1.3403912, 4.06973)
 
 [node name="Watermelon4" parent="." unique_id=1184139596 instance=ExtResource("4_h5o24")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.710915, 1.3403912, 8.464652)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -196, 1.5, 144)
+
+[node name="Watermelon7" parent="." unique_id=1064959878 instance=ExtResource("4_h5o24")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -196, 11.5, 99)
+
+[node name="Watermelon5" parent="." unique_id=903210680 instance=ExtResource("4_h5o24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -188, 1.5, 164)
+
+[node name="Watermelon6" parent="." unique_id=658290260 instance=ExtResource("4_h5o24")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -204, 1.5, 180)
 
 [node name="Stand" parent="." unique_id=1804393402 instance=ExtResource("3_mmdvd")]
 transform = Transform3D(0.715, 0, 0, 0, 0.715, 0, 0, 0, 0.715, 0.382, 0.918, 2.986)
