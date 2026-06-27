@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://omoph7s6w4ka"]
 
 [ext_resource type="Script" uid="uid://1ebf62vhay3v" path="res://ui/ui.gd" id="1_wl5ax"]
+[ext_resource type="Texture2D" uid="uid://cxtcu3txdlq37" path="res://ui/paper.png" id="2_tf0e0"]
 [ext_resource type="Texture2D" uid="uid://7rcrybksnxuw" path="res://box/box_icon.png" id="2_vkava"]
 [ext_resource type="Texture2D" uid="uid://batls6yf5xf3t" path="res://watermelon/watermelon.png" id="3_tf0e0"]
 [ext_resource type="FontFile" uid="uid://tthvwfsswj2t" path="res://main_menu/font/AlbertSans-BlackItalic.ttf" id="3_vkava"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_obcwv"]
 font = ExtResource("3_vkava")
+font_color = Color(0, 0, 0, 1)
 
 [node name="UI" type="Control" unique_id=482880489]
 layout_mode = 3
@@ -17,14 +19,26 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wl5ax")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1095823071]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -118.0
+offset_right = 208.0
+offset_bottom = 6.0
+texture = ExtResource("2_tf0e0")
+expand_mode = 1
+
 [node name="Counters" type="VBoxContainer" parent="." unique_id=1119377744]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 16.0
+offset_left = 48.0
 offset_top = -97.0
-offset_right = 204.0
+offset_right = 236.0
 offset_bottom = -16.0
 grow_vertical = 0
 
